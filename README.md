@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SecureDash - Next.js Auth System
 
-## Getting Started
+## Tech Stack
+- Next.js (App Router)
+- TypeScript & TailwindCSS
+- Framer Motion (Animations)
+- Next-Themes (Dark Mode)
+- Jose (JWT Authentication)
 
-First, run the development server:
+## Features
+- Protected Dashboard with Middleware
+- Cookie-based SSR Authentication
+- Responsive Sidebar with Animations
+- Dark/Light Mode Support
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Professional Dashboard & Auth System
+A high-performance, full-stack application built with Next.js 15 (App Router), featuring robust authentication, database persistence, and smooth user experiences.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠 Tech Stack
+Framework: Next.js 15 (App Router)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Language: TypeScript
 
-## Learn More
+Database: MongoDB (via Mongoose)
 
-To learn more about Next.js, take a look at the following resources:
+Auth: Bcrypt.js (Password Hashing) & Custom Cookie-based Sessions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+State Management: Zustand (with Persistence middleware)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Styling: Tailwind CSS
 
-## Deploy on Vercel
+Animations: Framer Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+UI Components: Sonner (Toast Notifications)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Font: Geist (Next.js Google Fonts)
+
+🏗 Key Features
+Full-Stack Auth: Secure registration and login flow using password hashing.
+
+Middleware Protection: Routes are guarded using Next.js Middleware to ensure secure user authentication.
+
+Persistent Data: Profile management that syncs directly with MongoDB, ensuring data integrity after page refreshes.
+
+State Synchronization: Automatic UI updates via Zustand and client-side hydration handling.
+
+Advanced UI: Dark mode support, smooth page transitions, and loading states powered by Framer Motion.
+
+Error Handling: Centralized notification system using Sonner for a seamless user experience.
+
+📂 Project Architecture
+The project follows a clean architectural pattern:
+
+actions/: Contains server-side logic (Server Actions) for database and auth operations.
+
+models/: Mongoose schemas defining the data structure.
+
+store/: Zustand state management for global client-side data.
+
+middleware.ts: Security layer controlling access to protected routes.
+
+lib/: Configuration files (e.g., MongoDB connection).
+
+🚀 Getting Started
+Clone the repository.
+
+Install dependencies: npm install
+
+Set up your .env.local file with the following variables:
+
+مقتطف الرمز
+MONGODB_URI=your_mongodb_connection_string
+SESSION_SECRET=your_super_secret_string
+Run the development server: npm run dev
